@@ -16,5 +16,5 @@ docker run -it ^
 	-v "C:/workspace/wildfly/standalone/deployments/":"c:/wildfly/standalone/deployments/"  ^
 	-v "C:/workspace/wildfly/standalone/log/":"C:/wildfly/standalone/log/":rw  ^
 	-v "C:/workspace/wildfly/modules/system/layers/base/com/microsoft/sqlserver/":"C:/wildfly/modules/system/layers/base/com/microsoft/sqlserver/" ^
-	wildfly
+	wuodan/wildfly-windows
   ```
