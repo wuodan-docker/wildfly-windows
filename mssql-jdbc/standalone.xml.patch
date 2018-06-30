@@ -1,0 +1,14 @@
+diff --git a/standalone.xml b/standalone.xml
+index 82928c6..fd82f95 100644
+--- a/standalone.xml
++++ b/standalone.xml
+@@ -148,6 +148,9 @@
+                     <driver name="h2" module="com.h2database.h2">
+                         <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
+                     </driver>
++                    <driver name="mssql" module="com.microsoft.sqlserver">
++                        <xa-datasource-class>com.microsoft.sqlserver.jdbc.SQLServerXADataSource</xa-datasource-class>
++                    </driver>
+                 </drivers>
+             </datasources>
+         </subsystem>
