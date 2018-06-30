@@ -4,7 +4,7 @@ FROM openjdk:8-jdk-nanoserver
 
 # Set the WILDFLY_VERSION env variable
 ENV WILDFLY_VERSION 10.1.0.Final
-ENV WILDFLY_SHA512 518DAA58A7C21A74483B7AFC01A5E6C798D2C1DC24D0545414A83B92A592089251A686DF3191C925912C3C60C41A68DD9E7660DF604CF944E0ACA0C2AD58924A
+ENV WILDFLY_SHA512 DA19FC0FCB090B291FDC7E317BC7E30897AD4AB6BE1DEE3BDF374276BD7E1565CAD74E14979030C077CB4C5DFEF2CA6BCFF623CACC99DEAF02AC44C54727A362
 ENV JBOSS_HOME C:/wildfly/
 
 # Uncomment this copy command to use local wildfly zip archive, please read the comment further down
@@ -22,6 +22,7 @@ RUN $file = \"wildfly-$env:WILDFLY_VERSION.zip\"; `
     Write-Host 'File Hash:'; `
     if ((Get-FileHash $file -Algorithm SHA512).Hash -ne $env:WILDFLY_SHA512) { `
         Write-Host 'FAILED!'; `
+		Write-Host "got $(Get-FileHash $file -Algorithm SHA512).Hash"; `
         exit 1; `
     }; `
     Write-Host 'Expanding ZIP file'; `
