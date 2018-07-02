@@ -44,4 +44,4 @@ EXPOSE 8080 9990 8787
 # Set the default command to run on boot
 # This will boot WildFly in the standalone mode and bind to all interface
 # CMD [$JBOSS_HOME, "standalone.bat", "-b", "0.0.0.0"]
-CMD ["C:\\wildfly\\bin\\standalone.bat", "-b", "0.0.0.0", "--debug"]
+CMD ["C:\\wildfly\\bin\\standalone.bat", "-b", "0.0.0.0"]
